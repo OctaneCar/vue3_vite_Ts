@@ -4,6 +4,7 @@
 
 <template>
   Front
+  <el-button>ok!!!</el-button>
 </template>
 
 <style lang="scss" scoped></style>
