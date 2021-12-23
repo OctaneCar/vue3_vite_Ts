@@ -1,5 +1,5 @@
+import type {RouteRecordRaw} from "vue-router";
 import {createRouter, createWebHashHistory,} from "vue-router";
-import type { RouteRecordRaw } from "vue-router";
 
 const routes: RouteRecordRaw[] = [];
 
@@ -8,7 +8,7 @@ const files = import.meta.globEager("./module/*.ts");
 for (const key in files) {
 	routes.push(...files[key].default);
 }
-console.log(routes);
+console.log(routes)
 
 
 //路由4.0新特性

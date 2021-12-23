@@ -3,8 +3,9 @@
 </script>
 
 <template>
-  Front
-  <el-button>ok!!!</el-button>
+  <div>
+    22
+  </div>
 </template>
 
 <style lang="scss" scoped></style>
