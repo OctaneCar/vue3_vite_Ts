@@ -10,6 +10,7 @@
     "lint:create": "eslint --init"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "axios": "^0.24.0",
     "element-plus": "^1.2.0-beta.6",
     "vue": "^3.2.16",
