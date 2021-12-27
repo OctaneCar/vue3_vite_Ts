@@ -2,6 +2,8 @@
 import {computed, ref} from "vue";
 import {useRouter} from "vue-router"; //vue-router提供的hooks函数
 
+import {Setting, UserFilled, DArrowLeft, DArrowRight, Avatar} from "@element-plus/icons-vue";
+
 const asideWidth = ref('200px')
 const switchIcon = () => {
   asideWidth.value = asideWidth.value === '200px' ? '60px' : '200px'

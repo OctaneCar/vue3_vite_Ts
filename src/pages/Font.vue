@@ -63,13 +63,20 @@ const clickSignIn = async () => {
 }
 
 const clickSignOn = async () => {
+  let userInfo = JSON.parse(localStorage.getItem('userInfo') || "")  //折磨了我好久
   await rulesForm.value.validate().then((ok: boolean) => {
-    if (ok) {
-      // let userInfo =JSON.parse( localStorage.getItem('userInfo'))
-      // if (userInfo) {
-      //   console.log(userInfo)
-      // }
+    if (ok && userInfo) {
+      if (userInfo.name === formSignUp.name && userInfo.password === formSignUp.password) {
+        ElMessage.success('登陆成功')
+        setTimeout(() => {
+          userRouter.push({name: 'Admin'})
+        }, 1000)
+      } else {
+        ElMessage.error('账户信息有误')
+      }
     }
+  }).catch(() => {
+    ElMessage.error('输入信息有误')
   })
 
 }
